@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stuart Exchange</title>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="stylesheet" href="style/main.css">
+    <script src="https://kit.fontawesome.com/0396950dcd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="cursor"></div>
+	<div id="aura"></div>
+
+    <div id="large-header" class="large-header" style="position: absolute; z-index: -1;">
+		<canvas id="demo-canvas"></canvas>
+	</div>
+
+    <div class="coin coin_1"></div>
+    <div class="coin coin_2"></div>
+    
+    <header>
+        <div class="header containerBig">
+            <div class="logo-lang">
+                <div class="logo">
+                    <a href="/" class="img">
+                        <img src="img/logo.svg" alt="logo">
+                    </a>
+                </div>
+                <div class="lang">
+                    <span>RU</span>
+                    <div class="toggle-pill">
+                        <input type="checkbox" id="pill1" name="check">
+                        <label for="pill1"></label>
+                    </div>
+                    <span>EN</span>
+                </div>
+            </div>
+            <div class="more">
+                <nav>
+                    <ul>
+                        <li><a href="#start" class="active">Главная</a></li>
+                        <li><a href="#reviews">Отзывы</a></li>
+                        <li><a href="#about">Кто мы?</a></li>
+                    </ul>
+                </nav>
+                <div class="social">
+                    <a href="#" class="soc tg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
+                            <path d="M18.9838 3.84995C18.9838 3.84995 20.7646 3.15557 20.6162 4.84192C20.5667 5.5363 20.1216 7.96661 19.7753 10.5953L18.5881 18.3823C18.5881 18.3823 18.4892 19.523 17.5988 19.7214C16.7084 19.9198 15.3729 19.0271 15.1255 18.8287C14.9276 18.6799 11.4156 16.4479 10.1789 15.3568C9.83267 15.0592 9.43694 14.464 10.2284 13.7696L15.4223 8.80981C16.0159 8.21462 16.6095 6.82587 14.1362 8.51221L7.211 13.2241C7.211 13.2241 6.41955 13.72 4.93561 13.2737L1.72032 12.2817C1.72032 12.2817 0.533138 11.5377 2.56124 10.7937C7.50782 8.46257 13.5921 6.08185 18.9838 3.84995Z" fill="#426AFA"/>
+                        </svg>
+                        <span>Telegram Support</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="start">
+        <section class="formSection wow fadeIn" data-wow-duration="1s">
+            <div class="formBlock container">
+                <div class="title_block">
+                    <div class="title">Обмен криптовалюты в <span>любой</span> точке мира</div>
+                </div>
+                <div class="main">
+                    <div class="tabs">
+                        <span data-tab="1" class="active">Обмен</span>
+                        <span data-tab="2">Миксер</span>
+                    </div>
+                    <div class="info-block">
+                        <form class="item exchange active" data-tab="1">
+                            <div class="item_a">
+                                <div class="field-block">
+                                    <div class="name">Отдаете:</div>
+                                    <div class="field">
+                                        <input type="text" placeholder="0.32424222">
+                                        <select name="">
+                                            <option value="BTC">BTC</option>
+                                            <option value="BTC">USDT</option>
+                                            <option value="BTC">TON</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item_a span2-b">
+                                <div class="field-block">
+                                    <div class="name">E-mail</div>
+                                    <div class="field">
+                                        <input type="text" placeholder="Введите свой e-mail">
+                                    </div>
+                                </div>
+                                <div class="field-block">
+                                    <div class="name">Ваш телефон</div>
+                                    <div class="field">
+                                        <input type="text" class="mask-phone" placeholder="Введите свой номер телефона">
+                                    </div>
+                                </div>
+                                <div class="field-block">
+                                    <div class="name">Логин в телеграме</div>
+                                    <div class="field">
+                                        <input type="text" placeholder="Введите свой логин в телеграме">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item_a">
+                                <div class="field-block">
+                                    <div class="name">Получаете:</div>
+                                    <div class="field">
+                                        <input type="text" placeholder="0.32424222">
+                                        <select name="">
+                                            <option value="BTC">SBER RUB</option>
+                                            <option value="BTC">TINK RUB</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item_a info">
+                                <div class="info">
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                                            <path d="M17 24.0833V15.5833" stroke="#426AFA" stroke-width="2.125" stroke-linecap="round"/>
+                                            <path d="M17 9.91667C17.7824 9.91667 18.4167 10.5509 18.4167 11.3333C18.4167 12.1157 17.7824 12.75 17 12.75C16.2176 12.75 15.5833 12.1157 15.5833 11.3333C15.5833 10.5509 16.2176 9.91667 17 9.91667Z" fill="#426AFA"/>
+                                            <path d="M9.91668 4.72856C12.0004 3.52319 14.4197 2.83331 17 2.83331C24.824 2.83331 31.1667 9.17594 31.1667 17C31.1667 24.8239 24.824 31.1666 17 31.1666C9.17597 31.1666 2.83334 24.8239 2.83334 17C2.83334 14.4197 3.52322 12.0004 4.72859 9.91665" stroke="#426AFA" stroke-width="2.125" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                    <span>Мы свяжемся с вами в течение 5 минут для завершения обмена<br>
+                                        Точный курс обмена будет выслан после связи с оператором</span>
+                                </div>
+                            </div>
+                            <div class="btn-block">
+                                <div class="btn checkField" data-type="exchange_request">Оставить заявку на обмен</div>
+                            </div>
+                        </form>
+                        <form class="item mixer" data-tab="2">
+                            <div class="item_a span2-r">
+                                <div class="field-block">
+                                    <div class="name">Адрес для получения средств:</div>
+                                    <div class="field">
+                                        <input type="text" placeholder="Адрес для получения средств">
+                                    </div>
+                                </div>
+                                <div class="field-block">
+                                    <div class="name">Дополнительный адрес:</div>
+                                    <div class="field">
+                                        <input type="text" placeholder="Дополнительный адрес">
+                                    </div>
+                                </div>
+                                <div class="field-block">
+                                    <div class="name">Логин в телеграме</div>
+                                    <div class="field">
+                                        <input type="text" placeholder="Введите свой логин в телеграме">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item_a info">
+                                <div class="info">
+                                    <div class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                                            <path d="M17 24.0833V15.5833" stroke="#426AFA" stroke-width="2.125" stroke-linecap="round"/>
+                                            <path d="M17 9.91667C17.7824 9.91667 18.4167 10.5509 18.4167 11.3333C18.4167 12.1157 17.7824 12.75 17 12.75C16.2176 12.75 15.5833 12.1157 15.5833 11.3333C15.5833 10.5509 16.2176 9.91667 17 9.91667Z" fill="#426AFA"/>
+                                            <path d="M9.91668 4.72856C12.0004 3.52319 14.4197 2.83331 17 2.83331C24.824 2.83331 31.1667 9.17594 31.1667 17C31.1667 24.8239 24.824 31.1666 17 31.1666C9.17597 31.1666 2.83334 24.8239 2.83334 17C2.83334 14.4197 3.52322 12.0004 4.72859 9.91665" stroke="#426AFA" stroke-width="2.125" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                    <span>Мы свяжемся с вами в течение 5 минут для завершения очистки</span>
+                                </div>
+                            </div>
+                            <div class="btn-block">
+                                <div class="btn checkField" data-type="mixer_request">Оставить заявку на очистку</div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="howSection wow fadeInUp" data-wow-duration="1s">
+            <div class="howBlock container">
+                <div class="info-block">
+                    <div class="title_block">
+                        <div class="title">Как произвести обмен на <span>наличные?</span></div>
+                    </div>
+                    <div class="desc">Чтобы произвести обмен на наличные, свяжитесь с нами по мессенджеру “Telegram” для оформления заявки</div>
+                </div>
+            </div>
+        </section>
+        <section class="reviewsSection wow fadeInUp" data-wow-duration="1s" id="reviews">
+            <div class="reviewsBlock container">
+                <div class="title_block">
+                    <div class="title">Отзывы <span>о нас</span></div>
+                </div>
+                <div class="info-block">
+                    <div class="item">
+                        <div class="review">
+                            <div class="name">Igor K.</div>
+                            <div class="review-text">Отличный обменник, обменял оперативно, буду обязательно обращаться в дальнейшем, курс пушка!</div>
+                            <div class="date">12.03.2023</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="review">
+                            <div class="name">Igor K.</div>
+                            <div class="review-text">Отличный обменник, обменял оперативно, буду обязательно обращаться в дальнейшем, курс пушка!</div>
+                            <div class="date">12.03.2023</div>
+                        </div>
+                        <div class="review">
+                            <div class="name">Igor K.</div>
+                            <div class="review-text">Отличный обменник, обменял оперативно, буду обязательно обращаться в дальнейшем, курс пушка!</div>
+                            <div class="date">12.03.2023</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="review">
+                            <div class="name">Igor K.</div>
+                            <div class="review-text">Отличный обменник, обменял оперативно, буду обязательно обращаться в дальнейшем, курс пушка!</div>
+                            <div class="date">12.03.2023</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-block">
+                    <a href="#" class="btn">Прочитать все отзывы</a>
+                </div>
+            </div>
+        </section>
+        <section class="aboutSection wow fadeInUp" data-wow-duration="1s" id="about">
+            <div class="aboutBlock container">
+                <div class="title_block">
+                    <div class="title">Кто <span>мы?</span></div>
+                </div>
+                <div class="info-block">
+                    <div class="item">
+                        <div class="icon"></div>
+                        <div class="name-desc">
+                            <div class="name">Преимущество</div>
+                            <div class="desc">Описание данного преимущества данного преимущества данного преимущества данного преимущества</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="icon"></div>
+                        <div class="name-desc">
+                            <div class="name">Преимущество</div>
+                            <div class="desc">Описание данного преимущества данного преимущества данного преимущества данного преимущества</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="icon"></div>
+                        <div class="name-desc">
+                            <div class="name">Преимущество</div>
+                            <div class="desc">Описание данного преимущества данного преимущества данного преимущества данного преимущества</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer containerBig">
+            <div class="logo-lang">
+                <div class="logo">
+                    <a href="/" class="img">
+                        <img src="img/logo.svg" alt="logo">
+                    </a>
+                </div>
+                <span>Stuart Exchange 2023 (c)</span>
+            </div>
+            <div class="more">
+                <nav>
+                    <ul>
+                        <li><a href="#start" class="active">Главная</a></li>
+                        <li><a href="#reviews">Отзывы</a></li>
+                        <li><a href="#about">Кто мы?</a></li>
+                    </ul>
+                </nav>
+                <div class="social">
+                    <a href="#" class="soc tg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
+                            <path d="M18.9838 3.84995C18.9838 3.84995 20.7646 3.15557 20.6162 4.84192C20.5667 5.5363 20.1216 7.96661 19.7753 10.5953L18.5881 18.3823C18.5881 18.3823 18.4892 19.523 17.5988 19.7214C16.7084 19.9198 15.3729 19.0271 15.1255 18.8287C14.9276 18.6799 11.4156 16.4479 10.1789 15.3568C9.83267 15.0592 9.43694 14.464 10.2284 13.7696L15.4223 8.80981C16.0159 8.21462 16.6095 6.82587 14.1362 8.51221L7.211 13.2241C7.211 13.2241 6.41955 13.72 4.93561 13.2737L1.72032 12.2817C1.72032 12.2817 0.533138 11.5377 2.56124 10.7937C7.50782 8.46257 13.5921 6.08185 18.9838 3.84995Z" fill="#426AFA"/>
+                        </svg>
+                        <span>Telegram Support</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header"></div>
+                <div class="modal-body"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=b9f86102-2842-4593-9f48-25f8d16d0de2&lang=ru_RU"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/app.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/EffectLine1.js"></script>
+    <script src="js/EffectLine2.js"></script>
+    <script src="js/demo-1.js"></script>
+    <script> new WOW().init(); </script>
+</body>
+</html>
