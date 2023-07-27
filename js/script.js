@@ -104,7 +104,7 @@ function sendAjax(dataForm, el) {
     if (type == 'exchange_request') {
         $('.modal#infoModal').modal('show')
         titleText.html(`
-            <div class="logo"><img src="../img/logo-modal.svg" alt="logo"></div>
+            <div class="logo"><img src="../img/logo.png" alt="logo"></div>
         `)
         bodyText.html(`
             <div class="desc">Спасибо за вашу заявку! Мы свяжемся с вами в течение 5 минут в мессенджере “Telegram” для завершения обмена</div>
