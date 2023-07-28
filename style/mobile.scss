@@ -1,0 +1,31 @@
+$black: #000000;
+$white: #FFFFFF;
+$blue: #426AFA;
+
+@media screen and (max-width: 1249px) {
+    header .header .more nav ul {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 1125px) {
+    footer {
+        padding: 30px 0;
+    }
+    .coin {
+        width: 450px;
+        height: 450px;
+    }
+    header .header .more {
+        column-gap: 30px;
+    }
+    header .header .logo-lang {
+        column-gap: 40px;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    header .header .more nav ul li a {
+        font-size: var(--fz14);
+    }
+}

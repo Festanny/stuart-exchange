@@ -171,9 +171,13 @@ select {
     left: 24px;
 }
 
+main {
+    padding-top: 65px;
+}
+
 header {
     width: 100%;
-    padding: 25px 0;
+    padding: 14px 0;
     background-color: $white;
     z-index: 50;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
@@ -189,7 +193,7 @@ header {
             align-items: center;
             gap: 10px 80px;
             .logo {
-                width: 154px;
+                width: 213px;
                 .img {
                     width: 100%;
                     img {
@@ -591,7 +595,6 @@ footer {
     &#infoModal {
         .modal-content {
             border-radius: 10px;
-            border: 1px solid $blue;
             background-color: transparent;
             .modal-header {
                 padding: 50px 130px 0;
@@ -600,6 +603,10 @@ footer {
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
+                border-radius: 10px 10px 0 0;
+                border-top: 1px solid $blue;
+                border-left: 1px solid $blue;
+                border-right: 1px solid $blue;
                 &::after {
                     content: '';
                     width: 50%;
@@ -622,6 +629,10 @@ footer {
                     background-color: $white;
                     font-size: var(--fz22);
                     text-align: center;
+                    border-radius: 0 0 10px 10px;
+                    border-bottom: 1px solid $blue;
+                    border-left: 1px solid $blue;
+                    border-right: 1px solid $blue;
                 }
                 .btn-block {
                     display: grid;
