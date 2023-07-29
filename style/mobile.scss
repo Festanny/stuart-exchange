@@ -16,10 +16,12 @@ $blue: #426AFA;
         width: 450px;
         height: 450px;
     }
-    header .header .more {
+    header .header .more,
+    footer .footer .more {
         column-gap: 30px;
     }
-    header .header .logo-lang {
+    header .header .logo-lang,
+    footer .footer .logo-lang {
         column-gap: 40px;
     }
 }
@@ -27,5 +29,228 @@ $blue: #426AFA;
 @media screen and (max-width: 999px) {
     header .header .more nav ul li a {
         font-size: var(--fz14);
+    }
+    .title_block {
+        margin-bottom: 40px;
+    }
+    .reviewsSection .reviewsBlock .info-block,
+    footer .footer .more nav ul {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    :root {
+        --fz40: 33px;
+        --fz25: 20px;
+        --fz20: 16px;
+    }
+    .formSection .formBlock .main .info-block .item .item_a {
+        padding: 25px;
+    }
+    header .header .logo-lang .logo,
+    footer .footer .logo-lang .logo {
+        width: 130px;
+    }
+    .formSection .formBlock .main .info-block .item .item_a .field-block {
+        gap: 10px;
+    }
+    .formSection .formBlock .main .info-block .item .item_a.info {
+        padding: 16px 25px;
+    }
+    header .header .more .social .soc.tg span {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header .header {
+        row-gap: 40px;
+    }
+    main {
+        padding-top: 30px;
+    }
+    .formSection .formBlock .main .info-block .item {
+        gap: 13px;
+    }
+    section {
+        padding: 40px 0;
+    }
+    .reviewsSection .reviewsBlock .info-block .item .review {
+        padding: 20px;
+    }
+    .reviewsSection .reviewsBlock .info-block,
+    .reviewsSection .reviewsBlock .info-block .item {
+        gap: 13px;
+    }
+    .reviewsSection .reviewsBlock .btn-block {
+        margin-top: 25px;
+    }
+    .reviewsSection .reviewsBlock .btn-block .btn {
+        padding: 24px 50px;
+    }
+    .aboutSection .aboutBlock .info-block {
+        gap: 13px;
+    }
+    header .header .more nav,
+    footer .footer .more nav {
+        display: none;
+    }
+    .coin {
+        width: 350px;
+        height: 350px;
+    }
+    .coin.coin_1 {
+        left: -180px;
+    }
+    .coin.coin_2 {
+        right: -180px;
+    }
+    .howSection .howBlock .info-block {
+        padding: 30px 40px;
+    }
+    input, textarea, select {
+        font-size: 14px;
+    }
+    select {
+        background-size: 15px;
+        padding-right: 45px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    :root {
+        --fz40: 28px;
+    }
+    .formSection .formBlock .main .info-block .item .item_a.info .info > span {
+        font-size: 14px;
+    }
+    input, textarea, select {
+        padding: 13px 20px;
+    }
+    .formSection .formBlock .main .info-block .item {
+        display: flex;
+        flex-direction: column;
+    }
+    select {
+        padding-right: 40px;
+    }
+    main {
+        padding-top: 20px;
+    }
+    .reviewsSection .reviewsBlock .info-block {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    header .header .logo-lang, footer .footer .logo-lang {
+        column-gap: 20px;
+    }
+    header .header .logo-lang .lang {
+        font-size: 14px;
+    }
+    .formSection .formBlock .main .tabs span {
+        padding: 15px 30px;
+    }
+    .formSection .formBlock .main .info-block .item.mixer .item_a .field-block {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    header .header {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    header .header .logo-lang .logo, footer .footer .logo-lang .logo {
+        width: 110px;
+    }
+    .toggle-pill input[type=checkbox] + label {
+        width: 40px;
+        height: 15px;
+    }
+    .toggle-pill input[type=checkbox] + label:before {
+        width: 18px;
+        height: 18px;
+    }
+    header .header .more .social .soc.tg {
+        padding: 5px 10px;
+    }
+    .coin {
+        width: 300px;
+        height: 300px;
+    }
+    .coin.coin_1 {
+        left: -140px;
+    }
+    .coin.coin_2 {
+        right: -140px;
+    }
+    .title_block {
+        margin-bottom: 30px;
+    }
+    .howSection .howBlock {
+        padding: 0;
+    }
+    .aboutSection .aboutBlock .info-block .item {
+        padding: 20px;
+    }
+    footer .footer {
+        column-gap: 20px;
+    }
+    .aboutSection .aboutBlock .info-block {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    :root {
+        --fz25: 17px;
+    }
+    .coin {
+        width: 250px;
+        height: 250px;
+    }
+    .formSection .formBlock .main .tabs span {
+        width: 375px;
+    }
+    .formSection .formBlock .main .tabs {
+        gap: 10px;
+    }
+    .howSection .howBlock .info-block {
+        padding: 20px;
+    }
+    .formSection .formBlock .main .info-block .item .item_a {
+        padding: 20px;
+    }
+    .formSection .formBlock .main .info-block .item .item_a.info .info .icon {
+        width: 20px;
+        height: 20px;
+        svg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    .formSection .formBlock .main .info-block .item .item_a.info {
+        padding: 16px 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer .footer {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    :root {
+        --fz40: 26px;
+    }
+    select {
+        padding-left: 10px;
     }
 }

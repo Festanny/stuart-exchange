@@ -300,6 +300,7 @@ h1, h2, h3, h4, h5, h6 {
 .formSection .formBlock .main .tabs {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 13px;
 }
 .formSection .formBlock .main .tabs span {
@@ -360,6 +361,9 @@ h1, h2, h3, h4, h5, h6 {
   gap: 11px;
   font-weight: 600;
 }
+.formSection .formBlock .main .info-block .item .item_a.info .info > span {
+  flex: 1;
+}
 .formSection .formBlock .main .info-block .item .item_a .field-block {
   display: flex;
   flex-direction: column;
@@ -377,7 +381,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
 }
 .formSection .formBlock .main .info-block .item .item_a .field-block .field input {
-  flex: 1;
+  width: 100%;
 }
 
 .howSection .howBlock {
@@ -399,7 +403,6 @@ h1, h2, h3, h4, h5, h6 {
 .reviewsSection .reviewsBlock {
   display: flex;
   flex-direction: column;
-  gap: 39px;
 }
 .reviewsSection .reviewsBlock .info-block {
   display: grid;
@@ -435,6 +438,7 @@ h1, h2, h3, h4, h5, h6 {
 .reviewsSection .reviewsBlock .btn-block {
   display: flex;
   justify-content: center;
+  margin-top: 39px;
 }
 .reviewsSection .reviewsBlock .btn-block .btn {
   width: -moz-fit-content;
@@ -534,6 +538,9 @@ footer .footer .more .social .soc.tg {
   align-items: center;
   gap: 8px;
   border: 1px solid #426AFA;
+}
+footer .footer .more .social .soc > span {
+  flex: 1;
 }
 
 .coin {

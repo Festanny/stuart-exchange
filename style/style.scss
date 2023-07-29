@@ -291,6 +291,7 @@ h1, h2, h3, h4, h5, h6 {
             .tabs {
                 display: flex;
                 justify-content: center;
+                flex-wrap: wrap;
                 gap: 13px;
                 span {
                     display: inline-block;
@@ -352,6 +353,9 @@ h1, h2, h3, h4, h5, h6 {
                                 align-items: center;
                                 gap: 11px;
                                 font-weight: 600;
+                                > span {
+                                    flex: 1;
+                                }
                             }
                         }
                         .field-block {
@@ -369,7 +373,7 @@ h1, h2, h3, h4, h5, h6 {
                                 display: flex;
                                 justify-content: space-between;
                                 input {
-                                    flex: 1;
+                                    width: 100%;
                                 }
                             }
                         }
@@ -400,7 +404,6 @@ h1, h2, h3, h4, h5, h6 {
     .reviewsBlock {
         display: flex;
         flex-direction: column;
-        gap: 39px;
         .info-block {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -435,6 +438,7 @@ h1, h2, h3, h4, h5, h6 {
         .btn-block {
             display: flex;
             justify-content: center;
+            margin-top: 39px;
             .btn {
                 width: fit-content;
                 padding: 24px 100px;
@@ -539,6 +543,9 @@ footer {
                         align-items: center;
                         gap: 8px;
                         border: 1px solid $blue;
+                    }
+                    > span {
+                        flex: 1;
                     }
                 }
             }
