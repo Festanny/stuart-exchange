@@ -122,6 +122,12 @@ $blue: #426AFA;
     :root {
         --fz40: 28px;
     }
+    .formSection .formBlock .main .info-block .item .item_a:nth-child(1) {
+        order: -2;
+    }
+    .formSection .formBlock .main .info-block .item .item_a:nth-child(3) {
+        order: -1;
+    }
     .formSection .formBlock .main .info-block .item .item_a.info .info > span {
         font-size: 14px;
     }
@@ -243,6 +249,14 @@ $blue: #426AFA;
 @media screen and (max-width: 480px) {
     footer .footer {
         flex-direction: column;
+    }
+    #cursor,
+    #aura,
+    .large-header {
+        display: none!important;
+    }
+    * {
+        cursor: auto!important;
     }
 }
 
